@@ -1,18 +1,20 @@
 package com.example.SpringBootDemo.controller;
 
 import com.example.SpringBootDemo.model.Employee;
-import com.example.SpringBootDemo.service.EmployeService;
+import com.example.SpringBootDemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/v1/employees")
 public class EmployeeController {
 
+    @Qualifier("employeeServiceImpl")
     @Autowired
-    EmployeService employeeService;
+    EmployeeService employeeService;
 
     @PostMapping
     public Employee save(@RequestBody Employee employee)

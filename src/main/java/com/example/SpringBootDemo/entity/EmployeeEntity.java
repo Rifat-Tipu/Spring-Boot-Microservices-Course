@@ -1,15 +1,15 @@
-package com.example.SpringBootDemo.model;
+package com.example.SpringBootDemo.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-@JsonIgnoreProperties({"department"})
-public class Employee {
+@Entity
+public class EmployeeEntity {
+    @Id
     private String employeeId;
     private String firstName;
     private String lastName;
     private String emailId;
-    //@JsonIgnore
     private String department;
 
     public String getEmployeeId() {

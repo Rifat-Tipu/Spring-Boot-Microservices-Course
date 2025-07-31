@@ -4,7 +4,7 @@ import com.example.SpringBootDemo.model.Employee;
 
 import java.util.List;
 
-public interface EmployeService {
+public interface EmployeeService {
     Employee save(Employee employee);
 
     List<Employee> getAllEmployees();
