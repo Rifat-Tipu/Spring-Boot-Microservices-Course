@@ -22,6 +22,7 @@ public class CloudGatewayApplication {
     return exchange -> Mono.just("userKey");
     }
 
+
     @Bean
     public Customizer<Resilience4JCircuitBreakerFactory>defaultCustomizer(){
         return factory -> factory.configureDefault(
